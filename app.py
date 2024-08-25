@@ -58,7 +58,7 @@ POPULAR_TICKERS = [
     'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'JPM', 'V',
     'MA', 'WMT', 'DIS', 'HD', 'KO', 'PFE', 'MRK', 'BA', 'C', 'CSCO', 'NKE', 'UNH',
     'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
-    'TATAMOTORS.BO', 'RELIANCE.NS', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
+    'TATAMOTORS.BO', 'RELIANCE.NS', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.NS', 'ICICIBANK.BO',
     'LT.BO', 'SBIN.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO', 'ZOMATO.BO', 'UBER',
     'LYFT', 'BYND', 'PINS', 'SHOP', 'BABA', 'TCEHY', 'NIO', 'PLTR', 'ABCAPITAL.BO', 'WIPRO.BO'
 ]
@@ -69,7 +69,7 @@ def update_ticker_list():
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'JPM', 'V',
         'MA', 'WMT', 'DIS', 'HD', 'KO', 'PFE', 'MRK', 'BA', 'C', 'CSCO', 'NKE', 'UNH',
         'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
-        'TATAMOTORS.BO', 'RELIANCE.NS', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
+        'TATAMOTORS.BO', 'RELIANCE.NS', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.NS', 'ICICIBANK.BO',
         'LT.BO', 'SBIN.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO', 'ZOMATO.BO', 'UBER',
         'LYFT', 'BYND', 'PINS', 'SHOP', 'BABA', 'TCEHY', 'NIO', 'PLTR', 'ABCAPITAL.BO', 'WIPRO.BO'
     ]
