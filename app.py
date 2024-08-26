@@ -6,20 +6,76 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import yfinance as yf
 
-# Static exchange rates
+# Static exchange rates (update these as needed)
 STATIC_EXCHANGE_RATES = {
     'USD': 1.0,   # US Dollar
     'EUR': 0.93,  # Euro
     'GBP': 0.80,  # British Pound
     'INR': 82.00, # Indian Rupee
-    # Add more currencies if needed
+    'JPY': 135.00,# Japanese Yen
+    'AUD': 1.50,  # Australian Dollar
+    'CAD': 1.35,  # Canadian Dollar
+    'CHF': 0.91,  # Swiss Franc
+    'CNY': 7.00,  # Chinese Yuan
+    'MXN': 18.00, # Mexican Peso
+    'BRL': 5.00,  # Brazilian Real
+    'NZD': 1.60,  # New Zealand Dollar
+    'SGD': 1.35,  # Singapore Dollar
+    'KRW': 1350.00,# South Korean Won
+    'ZAR': 19.00, # South African Rand
+    'HKD': 7.85,  # Hong Kong Dollar
+    'SEK': 10.20, # Swedish Krona
+    'NOK': 9.15,  # Norwegian Krone
+    'DKK': 6.90,  # Danish Krone
+    'ILS': 3.60,  # Israeli New Shekel
+    'TRY': 27.00, # Turkish Lira
+    'RUB': 80.00, # Russian Ruble
+    'SAR': 3.75,  # Saudi Riyal
+    'MYR': 4.70,  # Malaysian Ringgit
+    'PHP': 56.00, # Philippine Peso
+    'TWD': 30.00, # New Taiwan Dollar
+    'PLN': 4.00,  # Polish Zloty
+    'CZK': 22.50, # Czech Koruna
+    'HUF': 320.00,# Hungarian Forint
+    'CLP': 800.00,# Chilean Peso
+    'COP': 4100.00,# Colombian Peso
+    'PEN': 3.70,  # Peruvian Nuevo Sol
+    'ARS': 380.00,# Argentine Peso
+    'VEF': 25.00, # Venezuelan Bolívar
+    'DOP': 56.00, # Dominican Peso
+    'BHD': 0.38,  # Bahraini Dinar
+    'KWD': 0.31,  # Kuwaiti Dinar
+    'OMR': 0.39,  # Omani Rial
+    'QAR': 3.64,  # Qatari Riyal
+    'JOD': 0.71,  # Jordanian Dinar
+    'RSD': 117.00,# Serbian Dinar
+    'MAD': 10.30, # Moroccan Dirham
+    'TND': 3.05,  # Tunisian Dinar
 }
 
-# Example list of popular tickers
+# Example list of popular tickers (including some Indian company tickers)
 POPULAR_TICKERS = [
+    # Global
     'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'JPM', 'V',
-    # Add more tickers if needed
+    'MA', 'WMT', 'DIS', 'HD', 'KO', 'PFE', 'MRK', 'BA', 'C', 'CSCO', 'NKE', 'UNH',
+    'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
+    
+    # Indian Companies
+    'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
+    'LT.BO', 'SBI.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
 ]
+
+def update_ticker_list():
+    """Fetch or update the list of tickers from an external source."""
+    # For example, this can be replaced with code to fetch tickers from an API or database
+    additional_tickers = [
+        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'JPM', 'V',
+        'MA', 'WMT', 'DIS', 'HD', 'KO', 'PFE', 'MRK', 'BA', 'C', 'CSCO', 'NKE', 'UNH',
+        'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
+        'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
+        'LT.BO', 'SBI.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
+    ]
+    return list(set(POPULAR_TICKERS + additional_tickers))  # Remove duplicates if any
 
 @st.cache_data(ttl=3600)
 def update_ticker_list():
