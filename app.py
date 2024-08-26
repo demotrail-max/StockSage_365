@@ -61,8 +61,8 @@ POPULAR_TICKERS = [
     'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
     
     # Indian Companies
-    'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
-    'LT.BO', 'SBI.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
+    'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'HDFC.NS', 'ICICIBANK.BO',
+    'LT.BO', 'SBIN.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
 ]
 
 def update_ticker_list():
@@ -72,8 +72,8 @@ def update_ticker_list():
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'BRK-B', 'JPM', 'V',
         'MA', 'WMT', 'DIS', 'HD', 'KO', 'PFE', 'MRK', 'BA', 'C', 'CSCO', 'NKE', 'UNH',
         'INTC', 'T', 'ORCL', 'IBM', 'ADBE', 'CVX', 'XOM', 'MCD', 'PEP', 'ABT', 'NFLX',
-        'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'ICICIBANK.BO',
-        'LT.BO', 'SBI.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
+        'TATAMOTORS.BO', 'RELIANCE.BO', 'HDFCBANK.BO', 'INFY.BO', 'HDFC.BO', 'HDFC.NS', 'ICICIBANK.BO',
+        'LT.BO', 'SBIN.BO', 'HINDUNILVR.BO', 'ITC.BO', 'KOTAKBANK.BO', 'BHARTIARTL.BO'
     ]
     return list(set(POPULAR_TICKERS + additional_tickers))  # Remove duplicates if any
 
